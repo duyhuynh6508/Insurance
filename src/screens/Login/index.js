@@ -22,7 +22,7 @@ const Login = () => {
           </View>
           <View style={styles.loginContent}>
             <View style={styles.loginContent_}>
-              <AuthComponent autContentTitle='Bienveniedo de Vuelta' />
+              <AuthComponent autContentTitle='Welcome' />
               <View style={styles.loginContent_inputs}>
                 <AuthComponentLogin />
               </View>

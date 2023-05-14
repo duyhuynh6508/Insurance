@@ -24,10 +24,10 @@ const FormPaimentData = ({ paimentVal }) => {
   return (
     <>
         <View style={styles.paimentData_bottomCard}>
-            <InputFormPaimentData title='Número Telefonico' fieldName='numberPhone' keyboardType={'numeric'} placeholder={nameInCard} style={styles.paimentData_bottomCardInputContainer} />
+            <InputFormPaimentData title='Phone number' fieldName='numberPhone' keyboardType={'numeric'} placeholder={nameInCard} style={styles.paimentData_bottomCardInputContainer} />
         </View>
         <TouchableOpacity style={styles.paimentData_paimentButton} onPress={submitForm}>
-            <Text style={styles.paimentData_paimentButtonText}>Pagar ${total}.000</Text>
+            <Text style={styles.paimentData_paimentButtonText}>Pay ${total}.000</Text>
         </TouchableOpacity>
     </>
   )
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     paimentData_top: {
         width: '100%',
         height: 355,
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         alignItems: 'center'
     },
     paimentData_topCard: {
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
         marginTop: 30,
         width: '80%',
         height: 60,
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 20,

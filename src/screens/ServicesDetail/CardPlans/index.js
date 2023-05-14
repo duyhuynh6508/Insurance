@@ -43,8 +43,8 @@ const CardPlans = ({
           logoIcon: logoIcon,
         })
       : Alert.alert(
-          'Acepta Términos y Condiciones',
-          'Para continuar debe aceptar los terminos y condiciones',
+          'Accept Terms and Conditions',
+          'To continue you must accept the terms and conditions',
           [
             {
               text: 'Ok',
@@ -70,19 +70,19 @@ const CardPlans = ({
           <View style={styles.servicesDetail_containerTermsAndConditions}>
             {accept === false ? (
               <TouchableOpacity onPress={() => setAccept(!accept)}>
-                <Record size={22} color="#1B7BCC" />
+                <Record size={22} color="#267871" />
               </TouchableOpacity>
             ) : (
               <TouchableOpacity onPress={() => setAccept(!accept)}>
-                <RecordCircle size={22} color="#1B7BCC" />
+                <RecordCircle size={22} color="#267871" />
               </TouchableOpacity>
             )}
             <View style={{flexDirection: 'row'}}>
-              <Text style={{marginLeft: 5, fontSize: 12, color: 'black'}}>Acepto </Text>
+              <Text style={{marginLeft: 5, fontSize: 12, color: 'black'}}>Accept </Text>
               <TouchableOpacity
                 onPress={handlerModal}
                 style={styles.servicesDetail_containerTermsAndConditionsText}>
-                <Text style={{fontSize: 12, color: 'black'}}>términos y condiciones</Text>
+                <Text style={{fontSize: 12, color: 'black'}}>terms and conditions</Text>
               </TouchableOpacity>
               <BottomSheetModal
                 ref={bottomSheetModalTermRef}
@@ -110,7 +110,7 @@ const CardPlans = ({
                 onPress={accept => onPressAdd(accept)}
                 style={styles.servicesDetail_containerPriceButton}>
                 <Text style={styles.servicesDetail_containerPriceButtonText}>
-                  Agregar
+                  Add
                 </Text>
               </TouchableOpacity>
             </View>
@@ -151,12 +151,12 @@ const styles = StyleSheet.create({
   servicesDetail_containerPriceText: {
     fontSize: 25,
     fontWeight: '500',
-    color: '#1B7BCC',
+    color: '#267871',
   },
   servicesDetail_containerPriceButton: {
     width: 100,
     height: 40,
-    backgroundColor: '#1B7BCC',
+    backgroundColor: '#267871',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 15,

@@ -39,19 +39,19 @@ const FormCoberturaJuridicaComponent = ({ id, plan, price, procedureTipe, nameC,
     <BottomSheetModalProvider>
         <ScrollView style={styles.formCoberturaJuridica_scrollView} showsVerticalScrollIndicator={false}>
                 <View style={styles.formCoberturaJuridica_numberCoberture}>
-                    <Text style={{color: 'black'}}>Cobertura Jurídica Nro</Text>
+                    <Text style={{color: 'black'}}>Legal Coverage No.</Text>
                     <Text style={{color: 'black'}}>0321</Text>
                 </View>
-                <Text style={{color: 'black'}}>Fecha de expedición - Vigencia</Text>
+                <Text style={{color: 'black'}}>Date of issue - Validity</Text>
                 <View style={styles.formCoberturaJuridica_headerdate}>
-                    <Text style={{color: 'black'}}>Desde</Text>
+                    <Text style={{color: 'black'}}>From</Text>
                     <Text style={styles.formCoberturaJuridica_headerdate_}>{localeDate}</Text>
                 </View>
                 <View style={styles.formCoberturaJuridica_headerdate}>
-                    <Text style={{color: 'black'}}>Hasta</Text>
+                    <Text style={{color: 'black'}}>To</Text>
                     <Text style={styles.formCoberturaJuridica_headerdate_}>{ultil}</Text>
                 </View>
-                <Text style={styles.formCoberturaJuridica_headerTitle}>Beneficiario</Text>
+                <Text style={styles.formCoberturaJuridica_headerTitle}>Beneficiary</Text>
                 <Formik
                     initialValues={{
                         fullNameP: null,
@@ -65,15 +65,15 @@ const FormCoberturaJuridicaComponent = ({ id, plan, price, procedureTipe, nameC,
                         timePro: new Date(),
                     }}
                     validationSchema={Yup.object({
-                        fullNameP: Yup.string().typeError('El campo es requerido').required('El campo es requerido'),
-                        identificationP: Yup.number().typeError('El campo debe ser de tipo numérico').required('El campo es requerido'),
-                        directionP: Yup.string().typeError('El campo es requerido').required('El campo es requerido'),
-                        phoneP: Yup.number().typeError('El campo debe ser de tipo numérico').required('El campo es requerido'),
-                        nitC: Yup.number().typeError('El campo debe ser de tipo numérico').required('El campo es requerido'),
-                        directionC: Yup.string().typeError('El campo es requerido').required('El campo es requerido'),
-                        cityC: Yup.string().typeError('El campo es requerido').required('El campo es requerido'),
-                        datePro: Yup.string().typeError('El campo es requerido'),
-                        timePro: Yup.string().typeError('El campo es requerido'),
+                        fullNameP: Yup.string().typeError('The field is required').required('The field is required'),
+                        identificationP: Yup.number().typeError('The field must be of numeric type').required('The field is required'),
+                        directionP: Yup.string().typeError('The field is required').required('The field is required'),
+                        phoneP: Yup.number().typeError('The field must be of numeric type').required('The field is required'),
+                        nitC: Yup.number().typeError('The field must be of numeric type').required('The field is required'),
+                        directionC: Yup.string().typeError('The field is required').required('The field is required'),
+                        cityC: Yup.string().typeError('The field is required').required('The field is required'),
+                        datePro: Yup.string().typeError('The field is required'),
+                        timePro: Yup.string().typeError('The field is required'),
                     })}
                     onSubmit={(values, props, doctorSelected) => buttonRegisterCoberturaJuridica(values, props, doctorSelected)}
                 >

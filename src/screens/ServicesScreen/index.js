@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 import { Profile as ProfileIcon, ShoppingCart } from 'iconsax-react-native'
 import CoberturaLogoWhite from '../../Assets/Icons/CoberturaLogoWhite.png'
 import SoatLogo from '../../Assets/Icons/SoatLogo.png'
+import SurgicalLogo from '../../Assets/Icons/SurgicalLogo.png'
 import ViajesLogo from '../../Assets/Icons/ViajesLogo.png'
 import ArriendoLogo from '../../Assets/Icons/ArriendoLogo.png'
 //import MotoLogo from '../../Assets/Icons/MotoLogo.png'
@@ -33,11 +34,10 @@ import { AuthContext } from '../../Context/AuthContext'
 const servicess = [
   {
     id: '1',
-    name: 'Cobertura Jurídica',
-    description: 'Es una herramienta de protección jurídica y judicial diseñada para usted, con el fin de blindar su actuar...',
-    price: '150.000',
+    name: 'Legal Coverage',
+    description: 'It is a legal and judicial protection tool designed for you, in order to shield your actions...',    price: '150.000',
     logo: CoberturaLogoWhite,
-    logoDetail: CoberturaLogoBlue,
+    logoDetail: CoberturaLogoWhite,
     status: 'comprar',
     backgroundImg: BackgroundCoberturasJ,
     procedimientos: [
@@ -46,14 +46,14 @@ const servicess = [
           planes: [
             {
               planId: '1',
-              planName: 'Básico',
-              planDescription: `Es una herramienta de protección jurídica y judicial diseñada para usted, con el fin de blindar su actuar profesional de manera previa a la realización de cualquier procedimiento quirúrgico o tratamiento estético y con posterioridad a su efectiva realización. Cubre de manera integral todos los procedimientos quirúrgicos realizados por el cirujano plástico y médico cirujano (en dupla o exclusivamente por cirujano plástico) y no quirúrgicos (tratamientos estéticos), realizados por el cirujano plástico o médico cirujano y/o estético. Igualmente, se cubre cualquier tipo de tratamientos posquirúrgicos (masajes, drenajes, utilización de equipos de laser, ultrasonido, carboxis o en general) y servicios de medicina estética. Sin embargo, con una atención personalizada podrá proteger de forma particular cada intervención y/o tratamiento a realizar por usted o su empresa.${"\n"}${"\n"} 1. Asesoría y Acompañamiento Jurídico en la Etapa Precontractual con su paciente.${"\n"}${"\n"} 2. Representación Judicial en proceso de responsabilidad civil médica y/o responsabilidad civil en el caso de empresas dedicadas a la prestación de servicios médicos quirúrgicos y estéticos.${"\n"}${"\n"} 3. Representación Judicial en proceso penal.${"\n"}${"\n"} 4. Representación Judicial en proceso de responsabilidad disciplinaria médica ante el Tribunal de Ética Médica.${"\n"}${"\n"} 5. Acompañamiento y Asesoría permanente en proceso posoperatorio y restablecimiento de relación médico-paciente.${"\n"}${"\n"} 6. Acompañamiento y Capacitación en diligenciamiento de Historia Clínica.`,
+              planName: 'Basic',
+              planDescription: `It is a legal and judicial protection tool designed for you, in order to shield your professional actions prior to performing any surgical procedure or aesthetic treatment and after its effective performance. Comprehensively covers all surgical procedures performed by the plastic surgeon and medical surgeon (in pairs or exclusively by a plastic surgeon) and non-surgical (aesthetic treatments), performed by the plastic surgeon or medical surgeon and/or aesthetics. Likewise, any type of post-surgical treatment (massages, drains, use of laser equipment, ultrasound, carboxys or in general) and aesthetic medicine services are covered. However, with personalized attention you can protect in a particular way each intervention and/or treatment to be carried out by you or your company.${"\n"}${"\n"} 1. Legal Advice and Support in the Pre-contractual Stage with your patient.${"\n"}${"\n"} 2. Judicial representation in medical civil liability proceedings and/or civil liability in the case of companies dedicated to the provision of surgical and aesthetic medical services.$ {"\n"}${"\n"} 3. Legal representation in criminal proceedings.${"\n"}${"\n"} 4. Legal representation in medical disciplinary liability proceedings before the Ethics Tribunal Medical.${"\n"}${"\n"} 5. Accompaniment and permanent advice in the postoperative process and reestablishment of the doctor-patient relationship.${"\n"}${"\n"} 6. Accompaniment and Training in completing the Clinical History.`,              
               planPrice: '100.000'
             },
             {
               planId: '2',
               planName: 'Plus',
-              planDescription: 'Incluye los servicios de la cobertura básica y adicionalmente archivo, contratos, documentación y capacitación para el médico o la empresa que aportan una mejor gestión de la historia clínica como base de cualquier proceso judicial.',
+              planDescription: 'Includes the services of the basic coverage and additionally filing, contracts, documentation and training for the doctor or the company that provide a better management of the clinical history as the basis of any judicial process.',              
               planPrice: '150.000'
             }
           ]
@@ -64,14 +64,14 @@ const servicess = [
           planes: [
             {
               planId: '1',
-              planName: 'Básico',
-              planDescription: `Es una herramienta de protección jurídica y judicial diseñada para usted, con el fin de blindar su actuar profesional de manera previa a la realización de cualquier procedimiento quirúrgico o tratamiento estético y con posterioridad a su efectiva realización. Cubre de manera integral todos los procedimientos quirúrgicos realizados por el cirujano plástico y médico cirujano (en dupla o exclusivamente por cirujano plástico) y no quirúrgicos (tratamientos estéticos), realizados por el cirujano plástico o médico cirujano y/o estético. Igualmente, se cubre cualquier tipo de tratamientos posquirúrgicos (masajes, drenajes, utilización de equipos de laser, ultrasonido, carboxis o en general) y servicios de medicina estética. Sin embargo, con una atención personalizada podrá proteger de forma particular cada intervención y/o tratamiento a realizar por usted o su empresa.${"\n"}${"\n"} 1. Asesoría y Acompañamiento Jurídico en la Etapa Precontractual con su paciente.${"\n"}${"\n"} 2. Representación Judicial en proceso de responsabilidad civil médica y/o responsabilidad civil en el caso de empresas dedicadas a la prestación de servicios médicos quirúrgicos y estéticos.${"\n"}${"\n"} 3. Representación Judicial en proceso penal.${"\n"}${"\n"} 4. Representación Judicial en proceso de responsabilidad disciplinaria médica ante el Tribunal de Ética Médica.${"\n"}${"\n"} 5. Acompañamiento y Asesoría permanente en proceso posoperatorio y restablecimiento de relación médico-paciente.${"\n"}${"\n"} 6. Acompañamiento y Capacitación en diligenciamiento de Historia Clínica.`,
+              planName: 'Basic',
+              planDescription: `It is a legal and judicial protection tool designed for you, in order to shield your professional actions prior to performing any surgical procedure or aesthetic treatment and after its effective performance. Comprehensively covers all surgical procedures performed by the plastic surgeon and medical surgeon (in pairs or exclusively by a plastic surgeon) and non-surgical (aesthetic treatments), performed by the plastic surgeon or medical surgeon and/or aesthetics. Likewise, any type of post-surgical treatment (massages, drains, use of laser equipment, ultrasound, carboxys or in general) and aesthetic medicine services are covered. However, with personalized attention you can protect in a particular way each intervention and/or treatment to be carried out by you or your company.${"\n"}${"\n"} 1. Legal Advice and Support in the Pre-contractual Stage with your patient.${"\n"}${"\n"} 2. Judicial representation in medical civil liability proceedings and/or civil liability in the case of companies dedicated to the provision of surgical and aesthetic medical services.$ {"\n"}${"\n"} 3. Legal representation in criminal proceedings.${"\n"}${"\n"} 4. Legal representation in medical disciplinary liability proceedings before the Ethics Tribunal Medical.${"\n"}${"\n"} 5. Accompaniment and permanent advice in the postoperative process and reestablishment of the doctor-patient relationship.${"\n"}${"\n"} 6. Accompaniment and Training in completing the Clinical History.`,
               planPrice: '150.000'
             },
             {
               planId: '2',
               planName: 'Plus',
-              planDescription: 'Incluye los servicios de la cobertura básica y adicionalmente archivo, contratos, documentación y capacitación para el médico o la empresa que aportan una mejor gestión de la historia clínica como base de cualquier proceso judicial.',
+              planDescription: 'Includes the services of the basic coverage and additionally filing, contracts, documentation and training for the doctor or the company that provide a better management of the clinical history as the basis of any judicial process.',
               planPrice: '280.000'
             }
           ]
@@ -81,114 +81,81 @@ const servicess = [
   },
   {
     id: '2',
-    name: 'Complicaciones Postquirúrgicas',
-    description: 'Tiene como objeto Cubrir Los gastos médicos, de urgencias, hospitalarios y...',
-    descriptionL: `Tiene como objeto Cubrir Los gastos médicos, de urgencias, hospitalarios y quirúrgicos que se deriven de una complicación de Cirugía Estética.${"\n"}${"\n"}Le permite al asegurado, al profesional de la salud o a la institución prestadora de servicios de salud IPS, contar con una protección en gastos médicos adicional en caso de que se presente alguna complicación médico-quirúrgica, enmarcado en la seguridad de la atención en salud del paciente asegurado.${"\n"}${"\n"}Cubre hasta el límite establecido en la caratula de la póliza (como máxima responsabilidad), de los gastos médicos, que se deriven de la atención de una complicación por un procedimiento quirúrgico cubierto por la póliza.${"\n"}${"\n"}Complicaciones cubiertas${"\n"}${"\n"}- Se cubren las complicaciones que puedan aparecer dentro de los 45 días calendario, contados a partir de la hora de inicio del procedimiento, En caso de presentarse la compañía indemnizará los gastos médicos de urgencias, hospitalarios y quirúrgicos hasta por trecientos sesenta y cinco días (365) días calendario contados a partir de la fecha del diagnóstico de la complicación o hasta el valor contratado.${"\n"}${"\n"}- Se da cobertura para el manejo quirúrgico de la Contractura Capsular como parte de la cobertura para mamoplastia.${"\n"}${"\n"}- Se autorizan dentro del mismo acto quirúrgico procedimientos funcionales relacionados con las siguientes especialidades: Dermatología, Otorrinolaringología, Ginecología, Cirugía General y Cirugía Oral. Siempre y cuando los mismos estén asociados a un procedimiento Estético cubierto y sean autorizados por la aseguradora.
-    `,
+    name: 'Post-surgical Complications',
+    description: 'Its purpose is to cover medical, emergency, hospital and...',
+    descriptionL: `Its purpose is to cover the medical, emergency, hospital and surgical expenses that derive from a complication of Cosmetic Surgery.${"\n"}${"\n"}It allows the insured, the medical professional health or the institution that provides health services IPS, have additional protection in medical expenses in the event of any medical-surgical complication, framed in the safety of health care for the insured patient.${"\n" }${"\n"}Covers up to the limit established on the face of the policy (as maximum liability), for medical expenses derived from the care of a complication from a surgical procedure covered by the policy.${ "\n"}${"\n"}Covered complications${"\n"}${"\n"}- Complications that may appear within 45 calendar days from the time of delivery are covered. start of the procedure. In the event of the occurrence, the company will indemnify emergency, hospital and surgical medical expenses for up to three hundred and sixty-five (365) calendar days from the date of diagnosis of the complication or up to the contracted value. $ {"\n"}${"\n"}- Coverage is provided for the surgical management of Capsular Contracture as part of the coverage for mammoplasty.${"\n"}${"\n"}- Authorized Within the same surgical act, functional procedures related to the following specialties: Dermatology, Otolaryngology, Gynecology, General Surgery and Oral Surgery. As long as they are associated with a covered Aesthetic procedure and are authorized by the insurer.`,
     price: '100.000',
-    logo: CoberturaLogoWhite,
-    logoDetail: CoberturaLogoBlue,
+    logo: SurgicalLogo,
+    logoDetail: SurgicalLogo,
     status: 'comprar',
     backgroundImg: BackgroundCoberturasJ,
-    url: 'https://api.whatsapp.com/send?phone=573127813077&text=Hola,%20estoy%20interesado%20en%20adquirir%20un%20servicio%20de%20Complicaciones%20Postquirúrgicas'
   },
   {
     id: '3',
-    name: 'Soat',
-    description: 'Con el Seguro Obligat​orio de Accidentes de Tránsito manejas tranquilo porque sabes que estás...',
-    descriptionL: `Con el Seguro Obligat​orio de Accidentes de Tránsito manejas tranquilo porque sabes que estás cumpliendo la ley y con la responsabilidad de garantizar una prestación para conductores, pa​sajeros o peatones que se vean afectados en caso de sufrir algún accidente. Cuenta con:${"\n"}${"\n"}- Indemnización por muerte y gastos funerarios: Si como producto de un accidente de tránsito llegas a perder la vida, el SOAT garantiza que a tus beneficiarios se les entregan 750 salarios mínimos diarios legales vigentes que incluyen gastos de funeral. Ten en cuenta que esta indemnización solo es posible si el fallecimiento de la víctima se da antes de cumplirse un año del accidente y como consecuencia de este, es decir, si una persona queda en estado de coma, pero muere después de doce meses, esta cobertura ya no sería válida dentro del seguro. Esta indemnización también se les da a los beneficiarios de las personas que vayan contigo o a los peatones que fallezcan por causa del accidente.${"\n"}${"\n"}- Servicios de salud: Si en un accidente tú, las personas que van contigo o un peatón que atropellaste necesitan atención médica, el SOAT les cubre gastos como cirugías, exámenes, terapias, medicamentos y todo lo necesario para su recuperación.${"\n"}${"\n"}- Incapacidad: Si luego de tener un accidente de tránsito, el médico determina alguna pérdida de capacidad laboral, tienes una indemnización de máximo 180 salarios mínimos diarios legales vigentes. Ten en cuenta que si es una incapacidad temporal​, el SOAT no te cubre, sino que debes acudir a tu EPS.${"\n"}${"\n"}- Gastos de transporte: El SOAT te cubre los gastos de transporte de cada una de las personas que se vean afectadas con el accidente, desde el sitio donde ocurra hasta un centro médico. Por cada uno son 10 salarios mínimos diarios legales vigentes.${"\n"}${"\n"}Los beneficiarios pueden contar con una indemnización de 750 salarios mínimos diarios legales vigentes en caso de que tú, tus acompañantes o un peatón mueran como producto de un accidente de tránsito.${"\n"}${"\n"}Se pagan tus servicios de salud, los de las personas que vayan contigo en el momento del accidente o los de un peatón, hasta máximo 800 salarios mínimos diarios legales vigentes.${"\n"}${"\n"}Puedes tener una indemnización hasta 180 salarios mínimos diarios legales vigentes si quedas con discapacidad.${"\n"}${"\n"}Cubre los gastos de transporte desde el sitio del accidente hasta un centro médico por 10 salarios mínimos diarios legales vigentes.`,
+    name: 'SOAT',
+    description: 'With the Compulsory Traffic Accident Insurance you drive calmly because you know you are...',
+    descriptionL: `With the Compulsory Traffic Accident Insurance you drive calmly because you know that you are complying with the law and with the responsibility of guaranteeing a benefit for drivers, passengers or pedestrians who are affected in the event of an accident. Account with:${"\n"}${"\n"}- Compensation for death and funeral expenses: If you lose your life as a result of a traffic accident, the SOAT guarantees that your beneficiaries receive 750 current legal minimum daily wages that include funeral expenses. Keep in mind that this compensation is only possible if the death of the victim occurs before one year after the accident and as a consequence of this, that is, if a person remains in a coma, but dies after twelve months, this coverage would no longer be valid within the insurance. This compensation is also given to the beneficiaries of the people who go with you or to the pedestrians who die as a result of the accident.${"\n"}${"\n"}- Health services: If in an accident you, The people who go with you or a pedestrian that you ran over need medical attention, the SOAT covers expenses such as surgeries, exams, therapies, medicines and everything necessary for their recovery.${"\n"}${"\n"}- Disability: If after having a traffic accident, the doctor determines some loss of work capacity, you have compensation of a maximum of 180 current legal daily minimum wages. Keep in mind that if it is a temporary disability, the SOAT does not cover you, but you must go to your EPS.${"\n"}${"\n"}- Transportation expenses: The SOAT covers your expenses transportation of each of the people who are affected by the accident, from the place where it occurs to a medical center. For each one there are 10 current legal daily minimum wages.${"\n"}${"\n"}The beneficiaries can count on compensation of 750 current legal daily minimum wages in the event that you, your companions or a pedestrian die as a result of a traffic accident.${"\n"}${"\n"}Your health services are paid, those of the people who go with you at the time of the accident or those of a pedestrian, up to a maximum 800 current legal daily minimum wages.${"\n"}${"\n"}You can have compensation up to 180 current legal daily minimum wages if you become disabled.${"\n"}${"\n" }Covers transportation costs from the accident site to a medical center for 10 legal daily minimum wages in force.`,
     price: '100.000',
     logo: SoatLogo,
-    logoDetail: SoatLogoBlue,
+    logoDetail: SoatLogo,
     status: 'comprar',
     backgroundImg: BackgroundCoberturasJ,
-    url: ''
   },
   {
     id: '4',
-    name: 'Seguro de Viajes',
-    description: 'Si durante tu viaje tienes un accidente o una enfermedad, coordinando los servicios médicos que...',
-    descriptionL: `Si durante tu viaje tienes un accidente o una enfermedad, coordinando los servicios médicos que requieras. Si no te sientes bien, recibe atención médica por medio de llamada telefónica desde donde estés para ser atendido por un experto y, de acuerdo con tu estado de salud, te orientamos de la mejor manera.${"\n"}${"\n"}Se te paga el valor asegurado si afrontas alguna de las siguientes situaciones: se te pierde o demora tu equipaje, te roban tus documentos o cancelas tu viaje.${"\n"}${"\n"}Líneas de atención gratuitas en cinco países y atención rápida por WhatsApp. Además, ​cubrimiento para enfermedades preexistentes por hasta diez mil dólares.${"\n"}${"\n"}Todas las personas que, como tú, planean disfrutar sin límites un viaje nacional o internacional, sea terrestre o aéreo, solo o en compañía de tus seres queridos.${"\n"}${"\n"}Las coberturas están disponibles para cualquier interesado que tenga entre 0 y 74 años para el seguro internacional y sin ningún límite para el nacional. No se requiere evaluación médica ni declaración de asegurabilidad.`,
+    name: 'Travel insurance',
+    description: 'If during your trip you have an accident or illness, coordinating the medical services that...',
+    descriptionL: `If during your trip you have an accident or illness, coordinating the medical services you require. If you don't feel well, receive medical attention by means of a telephone call from wherever you are to be attended by an expert and, according to your state of health, we will guide you in the best way.${"\n"}${" \n"}You are paid the insured value if you face any of the following situations: your luggage is lost or delayed, your documents are stolen or your trip is cancelled.${"\n"}${"\n"}Lines free service in five countries and fast service via WhatsApp. In addition, ​coverage for pre-existing illnesses for up to ten thousand dollars.${"\n"}${"\n"}All people who, like you, plan to enjoy unlimited national or international travel, whether land or air, Alone or in the company of your loved ones.${"\n"}${"\n"}The coverages are available to anyone between the ages of 0 and 74 for international insurance and without any limit for national insurance. No medical evaluation or statement of insurability required.`,
     price: '250.000',
     logo: ViajesLogo,
-    logoDetail: ViajesLogoBlue,
+    logoDetail: ViajesLogo,
     status: 'comprar',
     backgroundImg: BackgroundCoberturasJ,
-    url: 'https://www.suraenlinea.com/viajes/sura?codigoAsesor=xxxx'
   },
   {
     id: '5',
-    name: 'Arrendamiento Digital',
-    description: 'Genera tranquilidad saber que cada mes cuentas con el dinero que te pagan los...',
-    descriptionL: `Genera tranquilidad saber que cada mes cuentas con el dinero que te pagan los inquilinos de tu propiedad, pero cuando no sea así, ¡no te preocupes! Tenemos la solución para que nunca dejes de recibir tus ingresos.​​​​​​​​​​${"\n"}${"\n"}Según la modalidad y el plan que elijas:${"\n"}Coberturas básicas:${"\n"}- Pago del arriendo en caso de incumplimiento de tu inquilino${"\n"}- Pago de cuotas de administración.${"\n"}- Servicios públicos domiciliarios pendientes en la entrega del inmueble${"\n"}${"\n"}Coberturas opcionales:${"\n"}- Daños y faltantes al inventario${"\n"}- Asistencia domiciliaria (servicios de plomería, electricidad, cerrajería, reemplazo de vidrios, gastos de traslado y asistencia jurídica telefónica).${"\n"}${"\n"}En caso de reclamación, la cobertura se mantendrá hasta que se restituya el inmueble o hasta que el inquilino efectúe el pago de sus obligaciones, con un límite máximo de indemnización de 12 meses. El seguro debe estar vigente y a paz y salvo.`,
+    name: 'Digital Leasing',
+    description: 'It generates peace of mind knowing that every month you have the money paid by the...',
+    descriptionL: `It generates peace of mind knowing that every month you have the money paid by the tenants of your property, but when it is not the case, do not worry! We have the solution so that you never stop receiving your income.​​​​​​​​​​${"\n"}${"\n"}Depending on the modality and plan you choose:${"\n "}Basic coverages:${"\n"}- Payment of the rent in case of default by your tenant${"\n"}- Payment of administration fees.${"\n"}- Residential public services pending in the delivery of the property${"\n"}${"\n"}Optional coverages:${"\n"}- Damages and missing inventory${"\n"}- Home assistance (plumbing services, electricity , locksmith, glass replacement, transfer expenses and telephone legal assistance).${"\n"}${"\n"}In the event of a claim, the coverage will be maintained until the property is restored or until the tenant make the payment of its obligations, with a maximum limit of compensation of 12 months. The insurance must be current and in good standing.`,
     price: '250.000',
     logo: ArriendoLogo,
-    logoDetail: ArriendoLogoBlue,
+    logoDetail: ArriendoLogo,
     status: 'comprar',
     backgroundImg: BackgroundCoberturasJ,
-    url: 'https://www.suraenlinea.com/arrendamiento-digital/sura/cotizacion/calculadora?asesor=XXXX'
   },
   {
     id: '6',
-    name: 'Seguro para Mascotas',
-    description: 'Con esta solución proteges tu patrimonio, en caso de que este se vea afectado...',
-    descriptionL: `Con esta solución proteges tu patrimonio, en caso de que este se vea afectado por cualquier evento relacionado con tus perros o gatos, y te acompaña satisfaciendo tus necesidades y las de tus mascotas, a través de la prestación de diferentes servicios, para que puedas cuidarlos, atenderlos y consentirlos como se lo merecen.​​​​​​​​​​${"\n"}${"\n"}Puedes tener coberturas como:${"\n"}- Responsabilidad civil por daños a terceros: si tu mascota le causa algún un daño material, lesión o la muerte a un tercero, que deba repararse, Sura te acompaña.${"\n"}- Gastos veterinarios: gastos en los que incurras por motivo de enfermedad o accidente de tu mascota.${"\n"}- Gastos exequiales o funerarios: es un auxilio que te otorgamos en caso de que tu mascota fallezca o deba aplicársele la eutanasia.${"\n"}- Gastos por robo o pérdida de mascota: es un auxilio que te otorgamos en caso de que tu mascota desaparezca.​${"\n"}- Guardería en caso de hospitalización o viaje del dueños.${"\n"}- Servicio de baño para tu mascota.
-    `,
+    name: 'Pet Insurance',
+    description: 'With this solution you protect your heritage, in case it is affected...',
+    descriptionL: `With this solution you protect your heritage, in case it is affected by any event related to your dogs or cats, and it accompanies you by satisfying your needs and those of your pets, through the provision of different services, so that you can take care of them , care for them and pamper them as they deserve. to third parties: if your pet causes material damage, injury or death to a third party, which must be repaired, Sura accompanies you.${"\n"}- Veterinary expenses: expenses incurred due to illness or accident of your pet.${"\n"}- Funeral or funeral expenses: it is an aid that we grant you in case your pet dies or must be euthanized.${"\n"}- Expenses due to theft or loss of pet: it is an aid that we grant you in case your pet disappears.​${"\n"}- Nursery in case of hospitalization or trip of the owners.${"\n"}- Bath service for your pet.`,
     price: '100.000',
     logo: PetsLogo,
-    logoDetail: PetsLogoBlue,
+    logoDetail: PetsLogo,
     status: 'comprar',
     backgroundImg: BackgroundCoberturasJ,
-    url: ''
   },
   {
     id: '7',
-    name: 'Automóvil',
-    description: 'Por medio de tu movilidad realizas las actividades de tu vida cotidiana. Por eso, estamos contigo para que...',
-    descriptionL: `Por medio de tu movilidad realizas las actividades de tu vida cotidiana. Por eso, estamos contigo para que te desplaces de forma segura sintiéndote acompañado y ahorrando tiempo y dinero. Cuenta con soluciones que se adaptan a los medios que escojas para tus re​corridos, reconociendo que, más que asegurar tu vehículo, cuidamos tu vida, la de quienes te encuentras en la vía y el patrimonio que has construido.${"\n"}${"\n"}Todos los planes te brindan el pago a los afectados por los daños que les causes en un choque o accidente (si tuviste alguna responsabilidad). Asimismo, buscamos una conciliación en el sitio si es posible. También, si te chocas o varas, enviamos a una persona para que se encargue de tu carro mientras continúas con tus actividades o, si lo prefieres, podemos acompañarte telefónicamente para que no te sientas solo. Además, te asistimos en un accidente de tránsito si tu salud física y mental o la de otros involucrados está en riesgo.${"\n"}${"\n"}Los planes cuentan con inspección de asegurabilidad de forma virtual o en el Centro de Servicios Autos SURA y en los de los aliados, servicios por la App Seguros SURA, taller móvil ilimitado si te varas (por pinchado de llanta, daños en la batería o falta de gasolina) y atención integral en el sitio del choque o accidente para evaluar tu salud y gestionar la reparación de tu vehículo desde el sitio. Adicionalmente, hotel o desplazamiento si estando de viaje en carretera te varas o accidentas y no puedes continuar hacia tu destino. `,
+    name: 'Car Insurance',
+    description: 'Through your mobility you carry out the activities of your daily life. Therefore, we are with you so that...',
+    descriptionL: `Through your mobility you carry out the activities of your daily life. For this reason, we are with you so that you can travel safely, feeling accompanied and saving time and money. It has solutions that adapt to the means you choose for your journeys, recognizing that, more than insuring your vehicle, we take care of your life, that of those you find on the road and the heritage you have built.${"\n "}${"\n"}All plans provide payment to those affected by the damages you cause in a crash or accident (if you had any liability). We also look for an on-site reconciliation if possible. Also, if you crash or get stranded, we send someone to take care of your car while you continue with your activities or, if you prefer, we can accompany you by phone so you don't feel alone. In addition, we assist you in a traffic accident if your physical and mental health or that of others involved is at risk.${"\n"}${"\n"}The plans have insurability inspection virtually or online the Autos SURA Service Center and those of allies, services through the SURA Insurance App, unlimited mobile workshop if you are stranded (due to a flat tire, battery damage or lack of gasoline) and comprehensive care at the crash site or accident to evaluate your health and manage the repair of your vehicle from the site. Additionally, hotel or displacement if you are stranded or have an accident while on a road trip and cannot continue to your destination.`,
     price: '200.000',
     logo: AutomovilLogo,
-    logoDetail: AutomovilLogoBlue,
+    logoDetail: AutomovilLogo,
     status: 'comprar',
     backgroundImg: BackgroundCoberturasJ,
-    url: ''
   },
-  // {
-  //   id: '8',
-  //   name: 'Seguros Voluntarios',
-  //   description: 'Descripción corta de lo que contiene el plan de cobertura jurídica',
-  //   descriptionL: 'Standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  //   price: '100.000',
-  //   logo: SegurosVoluntariosLogo,
-  //   logoDetail: SegurosVoluntariosLogoBlue,
-  //   status: 'comprar',
-  //   backgroundImg: BackgroundCoberturasJ,
-  //   url: 'https://www.suraenlinea.com/home?asesor=XXXXX#motos'
-  // },
-  // {
-  //   id: '9',
-  //   name: 'Plan Complementario',
-  //   description: 'El Plan Complementario es un conjunto de servicios al que puedes acceder...',
-  //   descriptionL: `El Plan Complementario es un conjunto de servicios al que puedes acceder voluntariamente para complementar tu EPS o Plan de Beneficios de Salud (PBS), brindándote coberturas no incluidas en éste y que te permiten disfrutar de la atención en condiciones de comodidad.${"\n"}${"\n"}Puedes contar con la red médica y hospitalaria de tu Plan de Beneficios en Salud, pero con una amplia lista de servicios adicionales como atención médica y odontológica domiciliaria, habitación individual si te hospitalizan y acceso directo a especialistas.${"\n"}${"\n"}En cualquiera de los casos, es requisito estar afiliado al Plan de Beneficios en Salud en el régimen contributivo.${"\n"}${"\n"}Se cuenta con diferentes planes acorde con tus necesidades y capacidad económica, que brindan diferentes coberturas, estos son: Plan plus, plan preferencial y plan Básico.`,
-  //   price: '100.000',
-  //   logo: PlanComplementarioLogo,
-  //   logoDetail: PlanComplementarioLogoBlue,
-  //   status: 'comprar',
-  //   backgroundImg: BackgroundCoberturasJ,
-  //   url: 'https://www.suraenlinea.com/pac-digital/sura/cotizar/datos?asesor=XXXX'
-  // },
   {
     id: '9',
-    name: 'Casa',
-    description: 'Cuando tienes un seguro de hogar sabes que, pase lo que pase, conservas el patrimonio que has...',
-    descriptionL: `Cuando tienes un seguro de hogar sabes que, pase lo que pase, conservas el patrimonio que has construido con los años o que estás iniciando, así proteges el lugar en el que vives, los electrodomésticos y muebles, tus elementos personales, las prendas de vestir que usas todos los días y hasta los elementos asociados al negocio que tienes en tu vivienda.${"\n"}${"\n"}Si en algún momento ocurre un evento cubierto por el seguro, como un incendio, huracán, derrumbe, entre otros, te reembolsamos el dinero para que sustituyas lo que resulte afectado.${"\n"}${"\n"}También tienes la opción de obtener coberturas adicionales que te respaldan en caso de robo con o sin violencia, daños a otros y daños o pérdidas de contenidos móviles que pueden estar por fuera de tu vivienda, por ejemplo, computadores portátiles, tabletas o cámaras fotográficas.${"\n"}${"\n"}Posibilidad de solicitar de forma fácil y rápida asistencia de expertos que atiendan en tu hogar emergencias de plomería, electricidad, cerrajería y vidrios. Asimismo, pide asesoría jurídica telefónica para resolver inquietudes relacionadas con temas penales, civiles, tributarios, administrativos, laborales y mercantiles.${"\n"}${"\n"}Puede incluir:${"\n"}- Incendio.${"\n"}- Caída de rayo en el lugar asegurado.${"\n"}- Explosión.${"\n"}- Daños causados debido al humo.${"\n"}- Daños causados debido al granizo.${"\n"}- Daños causados a causa de inundación.${"\n"}- Deslizamiento, derrumbe o desprendimiento de tierra y roca.${"\n"}- Daños causados debido al agua en el interior de la vivienda.${"\n"}- Caída de aeronaves u objetos que caigan de ellas.${"\n"}- Huracán, ciclón, tifón o tornado.${"\n"}- Impacto de vehículos terrestres al hogar.${"\n"}- Daños a suelos y terrenos.${"\n"}- Rotura de vidrios, acrílicos, espejos y unidades sanitarias.${"\n"}- Asonada, motín, conmoción civil, huelga, actos malintencionados de terceros y terrorismo.${"\n"}- Terremoto, temblor de tierra, erupción volcánica, maremoto y tsunami.
-    Hurto con o sin violencia.${"\n"}- Daño interno a equipos eléctricos, electrónicos y a gas.${"\n"}- Protección de contenidos móviles fuera del lugar asegurado.${"\n"}- Incremento en costos de materiales y mano de obra.${"\n"}- Daños a otros.${"\n"}- Asistencia domiciliaria.${"\n"}- Bono de sostenimiento del hogar.`,
+    name: 'Home Insurance',
+    description: 'When you have home insurance you know that, whatever happens, you keep the assets you have...',
+    descriptionL: `When you have home insurance, you know that, whatever happens, you keep the heritage that you have built over the years or that you are starting, thus you protect the place where you live, the appliances and furniture, your personal items, clothing that you use every day and even the elements associated with the business that you have in your home.${"\n"}${"\n"}If at any time an event covered by insurance occurs, such as a fire, hurricane, collapse, among others, we reimburse you the money to replace what is affected.${"\n"}${"\n"}You also have the option of obtaining additional coverage that supports you in case of robbery with or without violence , damage to others and damage or loss of mobile content that may be outside your home, for example, laptops, tablets or cameras.${"\n"}${"\n"}Possibility to request quick and easy assistance from experts who take care of plumbing, electrical, locksmith and glass emergencies in your home. Likewise, request legal advice by telephone to resolve concerns related to criminal, civil, tax, administrative, labor and commercial issues.${"\n"}${"\n"}May include:${"\n"}- Fire .${"\n"}- Lightning strike at the insured location.${"\n"}- Explosion.${"\n"}- Damage caused by smoke.${"\n"}- Damage caused by hail.${"\n"}- Damage caused by flooding.${"\n"}- Landslide, landslide or landslide and rockfall.${"\n"}- Damage caused by hail water inside the home.${"\n"}- Falling aircraft or objects falling from them.${"\n"}- Hurricane, cyclone, typhoon or tornado.${"\n"}- Impact of land vehicles on the home.${"\n"}- Damage to soil and land.${"\n"}- Breakage of glass, acrylic, mirrors and sanitary units.${"\n"}- Riot, riot, civil commotion, strike, malicious acts by third parties, and terrorism.${"\n"}- Earthquake, tremor, volcanic eruption, tsunami, and tsunami.
+    Theft with or without violence.${"\n"}- Internal damage to electrical, electronic and gas equipment.${"\n"}- Protection of mobile contents outside the insured place.${"\n"}- Increase in material and labor costs.${"\n"}- Damages to others.${"\n"}- Home care.${"\n"}- Home maintenance bonus.`,
     price: '100.000',
     logo: CasaLogo,
-    logoDetail: CasaLogoBlue,
+    logoDetail: CasaLogo,
     status: 'comprar',
     backgroundImg: BackgroundCoberturasJ,
-    url: ''
   }
 ]
 
@@ -223,7 +190,7 @@ const ServicesScreen = () => {
         <TouchableOpacity onPress={() => Navigation.navigate("ShoppingCart")} style={{position: 'relative'}}>
           <ShoppingCart color="black" variant="Linear" size={30} style={{ marginRight: 20 }} />
           {shopping.length > 0 ?
-            <View style={{position: 'absolute', right: 10, top: -7, backgroundColor: '#1B7BCC', height: 22, width: 22, borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+            <View style={{position: 'absolute', right: 10, top: -7, backgroundColor: '#267871', height: 22, width: 22, borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
               <Text style={{color: 'white', fontSize: 12}}>{shopping.length}</Text>
             </View>
             :

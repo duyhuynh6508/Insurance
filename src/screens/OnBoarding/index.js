@@ -8,13 +8,13 @@ const OnBoarding = () => {
   return (
     <ImageBackground style={styles.onBoarding} source={AuthBackgroundImg}>
         <View style={styles.onBoarding_}>
-            <Text style={styles.onBoarding_title}>Blindaje Quirúrgico</Text>
+            <Text style={styles.onBoarding_title}>TMA Insurance</Text>
             <View>
-                <TouchableOpacity onPress={() => navigation.navigate("Login")} style={[styles.onBoarding_buttons, {backgroundColor: '#1B7BCC'}]}>
+                <TouchableOpacity onPress={() => navigation.navigate("Login")} style={[styles.onBoarding_buttons, {backgroundColor: '#267871'}]}>
                     <Text style={{ color: 'white' }}>Login</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate("Register")} style={[styles.onBoarding_buttons, {backgroundColor: 'white'}]}>
-                    <Text style={{ color: '#1B7BCC' }}>Register</Text>
+                    <Text style={{ color: '#267871' }}>Register</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         lineHeight: 38,
         fontWeight: '700',
-        color: 'white'
+        color: '#267871'
     },
     onBoarding_buttons: {
         width: 280,

@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         marginRight: 8
     },
     publicityContent_button: {
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         width: 80,
         height: 35,
         justifyContent: 'center',

@@ -17,14 +17,34 @@ const CardPlansWebView = ({ titleDescription, description, price, backgroundImg,
   const onPressAdd = async () => {
     if(accept === true) {
       navigation.navigate('FormPolicies', { price: price, backgroundImg: backgroundImg, name: name, logoDetail: logoDetail, url: url})
-      await axios.post(`https://blindaje.pdtcomunicaciones.com/api/update/trackingService/${name}`, {
-        nameU: nameU,
-        service: serviceU
-      })
+      try{await axios.post(`https://blindaje.pdtcomunicaciones.com/api/update/trackingService/${name}`, {
+        user_id: 12,
+        tracking_service_id: 2,
+        start: Date.now(),
+        end: Date.now()
+      }).then(response => {
+        // Handle the response data
+        console.log(response.data.service);
+      })}
+      catch(error){
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          console.log('Server responded with a status code:', error.response.status);
+          console.log('Response data:', error.response.data);
+          console.log('Response headers:', error.response.headers);
+        } else if (error.request) {
+          // The request was made but no response was received
+          console.log('No response received:', error.request);
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log('Error:', error.message);
+        }
+        console.log('Error config:', error.config);
+      }
     } else {
       Alert.alert(
-        "Acepta Términos y Condiciones",
-        "Para continuar debe aceptar los terminos y condiciones",
+        'Accept Terms and Conditions',
+        'To continue you must accept the terms and conditions',
         [
           {
             text: "Ok"
@@ -47,17 +67,17 @@ const CardPlansWebView = ({ titleDescription, description, price, backgroundImg,
       <View style={styles.servicesDetail_containerTermsAndConditions}>
         {accept === false ?
           <TouchableOpacity onPress={() => setAccept(!accept)}>
-            <Record size={25} color='#1B7BCC' />
+            <Record size={25} color='#267871' />
           </TouchableOpacity>
           :
           <TouchableOpacity onPress={() => setAccept(!accept)}>
-            <RecordCircle size={25} color='#1B7BCC' />
+            <RecordCircle size={25} color='#267871' />
           </TouchableOpacity>
         }
         <View style={{flexDirection: 'row'}}>
-          <Text style={{marginLeft: 5, color: 'black'}}>Acepto </Text>
+          <Text style={{marginLeft: 5, color: 'black'}}>Accept </Text>
           <TouchableOpacity onPress={handlerModal} style={styles.servicesDetail_containerTermsAndConditionsText}>
-            <Text style={{color: 'black'}}>términos y condiciones</Text>
+            <Text style={{color: 'black'}}>terms and conditions</Text>
           </TouchableOpacity>
           <BottomSheetModal ref={bottomSheetModalTermRef} index={0} snapPoints={snapModalPoint} backgroundStyle={{ borderRadius: 30, shadowOffset: {height: -3}, shadowColor: 'black', shadowOpacity: 0.4}}>
             <TermsAndConditionsCobertura setAccept={setAccept} bottomSheetModalTermRef={bottomSheetModalTermRef} />
@@ -67,7 +87,7 @@ const CardPlansWebView = ({ titleDescription, description, price, backgroundImg,
       <View style={styles.servicesDetail_containerPrice}>
         <Text style={styles.servicesDetail_containerPriceText}>${price}</Text>
         <TouchableOpacity onPress={accept => onPressAdd(accept)} style={styles.servicesDetail_containerPriceButton}>
-          <Text style={styles.servicesDetail_containerPriceButtonText}>Agregar</Text>
+          <Text style={styles.servicesDetail_containerPriceButtonText}>Add</Text>
         </TouchableOpacity>
       </View>
     </>
@@ -107,13 +127,13 @@ const styles = StyleSheet.create({
   servicesDetail_containerPriceText: {
     fontSize: 25,
     fontWeight: '500',
-    color: '#1B7BCC',
+    color: '#267871',
     marginLeft: 10
   },
   servicesDetail_containerPriceButton: {
     width: 150,
     height: 60,
-    backgroundColor: '#1B7BCC',
+    backgroundColor: '#267871',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 15

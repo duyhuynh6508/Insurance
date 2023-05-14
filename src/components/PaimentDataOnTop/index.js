@@ -14,7 +14,7 @@ const PaimentDataOnTop = () => {
     const [cvc, setCvc] = useState(null)
 
     const [numInCard, setNumInCard] = useState('**** **** **** ****')
-    const [nameInCard, setNameInCard] = useState('Nombre Apellido')
+    const [nameInCard, setNameInCard] = useState('Name in card')
     const [dateInCard, setDateInCard] = useState('mm/aa')
 
   return (
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     paimentData_top: {
         width: '100%',
         height: 355,
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         alignItems: 'center'
     },
     paimentData_topCard: {

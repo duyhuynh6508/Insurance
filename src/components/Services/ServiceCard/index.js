@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     serviceCard: {
         width: 135,
         height: 160,
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         borderRadius: 20,
         marginTop: 10,
         marginRight: 15,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     },
     serviceCard_name: {
         color: 'white',
-        fontSize: 26,
+        fontSize: 20,
         fontWeight: '900',
         lineHeight: 26,
         textTransform: 'uppercase',

@@ -24,7 +24,7 @@ const MyPolicies = () => {
 
   useEffect(() => {
     Navigation.setOptions({
-      headerTitle: 'Mis Pólizas',
+      headerTitle: 'My Policies',
       headerLeft: () => (
         <TouchableOpacity onPress={handlerModal}>
           <ProfileIcon color="black" variant="Linear" size={30} style={{ marginLeft: 20 }} />
@@ -34,7 +34,7 @@ const MyPolicies = () => {
         <TouchableOpacity onPress={() => Navigation.navigate("ShoppingCart")} style={{position: 'relative'}}>
           <ShoppingCart color="black" variant="Linear" size={30} style={{ marginRight: 20 }} />
           {shopping.length > 0 ?
-            <View style={{position: 'absolute', right: 10, top: -7, backgroundColor: '#1B7BCC', height: 22, width: 22, borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+            <View style={{position: 'absolute', right: 10, top: -7, backgroundColor: '#267871', height: 22, width: 22, borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
               <Text style={{color: 'white', fontSize: 12}}>{shopping.length}</Text>
             </View>
             :
@@ -58,12 +58,31 @@ const MyPolicies = () => {
   useEffect(() => {
       axios.get(`https://blindaje.pdtcomunicaciones.com/api/get/cobertura/${userData.id}`)
       .then(res => {
+        console.log("res.data.cobertura: ", res.data.cobertura);
           setAllCobertures(res.data.cobertura)
       }).catch(e => {
           console.log(e)
       })
   }, [])
-
+const list =
+[
+  {
+    id:1,
+    fullNameP: "DH",
+    procedureTipe:"Travel Insurance"
+  },
+  {
+    id:2,
+    fullNameP: "DH",
+    procedureTipe:"Pet Insurance"
+  },
+  {
+    id:3,
+    fullNameP: "DH",
+    procedureTipe:"Car Insurance"
+  },
+];
+const values = allCobertures == [] ? list : allCobertures.push(list);
   return (
     <BottomSheetModalProvider>
       <BottomSheetModal ref={bottomSheetModalProfileRef} index={0} snapPoints={snapModalPoint}>

@@ -7,10 +7,10 @@ const Profile = () => {
 
   return (
     <View style={styles.profile}>
-      <Text>Nombre</Text>
+      <Text>Name</Text>
       <Text style={styles.profile_name}>{userData.name}</Text>
       <TouchableOpacity onPress={() => {logout()}} style={styles.profile_logoutButton}>
-        <Text style={styles.profile_logoutButtonText}>Cerrar sesión</Text>
+        <Text style={styles.profile_logoutButtonText}>Logout</Text>
       </TouchableOpacity>
     </View>
   )
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   profile_logoutButton: {
     width: '70%',
     height: 60,
-    backgroundColor: '#1B7BCC',
+    backgroundColor: '#267871',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,

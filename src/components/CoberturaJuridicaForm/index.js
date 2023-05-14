@@ -44,8 +44,8 @@ const CoberturaJuridicaForm = ({ procedureTipe, setDoctorSelected, doctorSelecte
         setValueDoctor('')
         if(doctorSelected.length === 2){
             Alert.alert(
-                "Máximo de cirujanos",
-                "Puede agregar un máximo de dos cirujanos",
+                "Maximum number of doctors",
+                "You can add a maximum of two doctors",
                 [
                     {
                         text: 'Ok'
@@ -78,7 +78,7 @@ const CoberturaJuridicaForm = ({ procedureTipe, setDoctorSelected, doctorSelecte
 
   return (
     <>
-        <Text style={{fontSize: 13, opacity: .5, marginTop: 6, color: 'black'}}>Agregar médico cirujano y Cirujanos plasticos involucrados en la operación</Text>
+        <Text style={{fontSize: 13, opacity: .5, marginTop: 6, color: 'black'}}>Add doctor and plastic doctors involved in the operation</Text>
         <InputAddDoctors value={valueDoctor} onChangeText={text => setValueDoctor(text)}/>
         <View style={styles.inputDoctorsFilter_container}>
             {filter.length !== 0 && valueDoctor !== '' ?
@@ -99,7 +99,7 @@ const CoberturaJuridicaForm = ({ procedureTipe, setDoctorSelected, doctorSelecte
                 : filter.length === 0 && valueDoctor !== '' ?
                         <View style={styles.inputDoctorsFilter}>
                             <TouchableOpacity style={styles.inputDoctorsFilter_buttonAdd} onPress={handlerModal}>
-                                <Text style={styles.inputDoctorsFilter_buttonAddText}>Agregar Médico Cirujano</Text>
+                                <Text style={styles.inputDoctorsFilter_buttonAddText}>Add doctor</Text>
                             </TouchableOpacity>
                             <BottomSheetModal ref={bottomSheetModalRef} index={0} snapPoints={snapModalPoint} backgroundStyle={{ borderRadius: 30, shadowOffset: {height: -3}, shadowColor: 'black', shadowOpacity: 0.4}}>
                                 <InputFormModalAddDoctors valueDoctor={valueDoctor} bottomSheetModalRef={bottomSheetModalRef} doctorSelected={doctorSelected} setDoctorSelected={setDoctorSelected} setFilter={setFilter} setValueDoctor={setValueDoctor} setDoctorsSelectedId={setDoctorsSelectedId} doctorsSelectedId={doctorsSelectedId} />
@@ -121,7 +121,7 @@ const CoberturaJuridicaForm = ({ procedureTipe, setDoctorSelected, doctorSelecte
                                     </View>
                                     <View style={styles.doctorAdd_delete}>
                                         <TouchableOpacity style={styles.doctorAdd_deleteButton} onPress={() => deleteDoctor(data)}>
-                                            <Text style={styles.doctorAdd_deleteButtonText}>Eliminar</Text>
+                                            <Text style={styles.doctorAdd_deleteButtonText}>Remove</Text>
                                         </TouchableOpacity>
                                     </View>
                                 </View>
@@ -131,25 +131,25 @@ const CoberturaJuridicaForm = ({ procedureTipe, setDoctorSelected, doctorSelecte
                 </>
             }
         </View>
-        <Text style={styles.formCoberturaJuridica_headerTitlesInfoPaciente}>Paciente</Text>
-        <InputFormCoberturaJuridica fieldName='fullNameP' title='Nombre' placeholder='Nombre Completo' icon={<User color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
-        <InputFormCoberturaJuridica fieldName='identificationP' title='Identificación' placeholder='Número de Identificación' icon={<Hashtag color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
-        <InputFormCoberturaJuridica fieldName='directionP' title='Dirección' placeholder='Dirección' icon={<Book1 color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
-        <InputFormCoberturaJuridica fieldName='phoneP' title='Teléfono' placeholder='Número de Teléfono' icon={<Hashtag color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
-        <Text style={styles.formCoberturaJuridica_headerTitlesInfo}>Institución donde se realiza la investigación quirúrgica y/o tratamiento estético</Text>
-        <InputFormCoberturaJuridica fieldName='nitC' title='Nit' placeholder='Nit' icon={<Hashtag color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
-        <InputFormCoberturaJuridica fieldName='directionC' title='Dirección' placeholder='Dirección' icon={<Book1 color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
-        <InputFormCoberturaJuridica fieldName='cityC' title='Ciudad' placeholder='Ciudad' icon={<Book color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
-        <Text style={styles.formCoberturaJuridica_headerTitlesInfo}>Procedimientos quirúrgicos y/o estéticos realizados</Text>
-        <Text style={{fontSize: 12, opacity: .5, marginTop: 2, color: 'black'}}>Tipo de Procedimiento</Text>
+        <Text style={styles.formCoberturaJuridica_headerTitlesInfoPaciente}>Patient</Text>
+        <InputFormCoberturaJuridica fieldName='fullNameP' title='Name' placeholder='Full name' icon={<User color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
+        <InputFormCoberturaJuridica fieldName='identificationP' title='Identification' placeholder='Identification number' icon={<Hashtag color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
+        <InputFormCoberturaJuridica fieldName='directionP' title='Address' placeholder='Address' icon={<Book1 color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
+        <InputFormCoberturaJuridica fieldName='phoneP' title='Phone' placeholder='Phone number' icon={<Hashtag color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
+        <Text style={styles.formCoberturaJuridica_headerTitlesInfo}>Institution where surgical research and/or aesthetic treatment is performed</Text>
+        <InputFormCoberturaJuridica fieldName='nitC' title='Unit' placeholder='Unit' icon={<Hashtag color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
+        <InputFormCoberturaJuridica fieldName='directionC' title='Address' placeholder='Address' icon={<Book1 color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
+        <InputFormCoberturaJuridica fieldName='cityC' title='City' placeholder='City' icon={<Book color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} />
+        <Text style={styles.formCoberturaJuridica_headerTitlesInfo}>Surgical and/or aesthetic procedures performed</Text>
+        <Text style={{fontSize: 12, opacity: .5, marginTop: 2, color: 'black'}}>Type of Procedure</Text>
         <Text style={{marginTop: 7, fontWeight: '600', color: 'black'}}>{procedureTipe}</Text>
-        <InputFormCoberturaJuridica fieldName='datePro' title='Fecha Intervención' placeholder={dateProFirst.toLocaleDateString()} icon={<Calendar color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} onPressIn={() => setDateProOpen(!dateProOpen)} />
+        <InputFormCoberturaJuridica fieldName='datePro' title='Intervention Date' placeholder={dateProFirst.toLocaleDateString()} icon={<Calendar color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} onPressIn={() => setDateProOpen(!dateProOpen)} />
         <DatePicker
             {...props}
             modal
             minimumDate={new Date()}
             mode='date'
-            title='Seleccione fecha de intervención'
+            title='Select intervention date'
             open={dateProOpen}
             date={props.values.datePro && new Date(props.values.datePro)}
             onConfirm={(date) => {
@@ -161,13 +161,13 @@ const CoberturaJuridicaForm = ({ procedureTipe, setDoctorSelected, doctorSelecte
                 setDateProOpen(false)
             }}
         />
-        <InputFormCoberturaJuridica  fieldName='timePro' title='Hora Intervención' placeholder={timeProFirst.toLocaleTimeString()} icon={<Clock color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} onPressIn={() => setTimeProOpen(!timeProOpen)} />
+        <InputFormCoberturaJuridica  fieldName='timePro' title='Time Intervention' placeholder={timeProFirst.toLocaleTimeString()} icon={<Clock color='black' variant='Linear' size={20} style={{marginVertical: 8}} />} onPressIn={() => setTimeProOpen(!timeProOpen)} />
         <DatePicker
             {...props}
             modal
             minimumDate={new Date()}
             mode='time'
-            title='Seleccione hora de intervención'
+            title='Select time Intervention'
             open={timeProOpen}
             date={props.values.timePro && new Date(props.values.timePro)}
             onConfirm={(time) => {
@@ -181,7 +181,7 @@ const CoberturaJuridicaForm = ({ procedureTipe, setDoctorSelected, doctorSelecte
         />
         <View style={{flex: 1, alignItems: 'center'}}>
             <TouchableOpacity style={styles.formCoberturaJuridica_button} onPress={submitForm}>
-                <Text style={styles.formCoberturaJuridica_buttonText}>Continuar</Text>
+                <Text style={styles.formCoberturaJuridica_buttonText}>Continue</Text>
             </TouchableOpacity>
         </View>
     </>
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
     inputDoctorsFilter_buttonAdd: {
         width: '100%',
         height: 40,
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 10
@@ -301,7 +301,7 @@ const styles = StyleSheet.create({
     formCoberturaJuridica_button: {
         width: '80%',
         height: 60,
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         marginTop: 20,
         marginBottom: 60,
         justifyContent: 'center',

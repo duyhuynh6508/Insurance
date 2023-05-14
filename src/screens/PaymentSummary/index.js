@@ -196,7 +196,7 @@ function Index(props){
             <ActivityIndicator size="large" color="#0093d9" />
             <Text style={{
               color: 'black'
-            }}>Estamos procesando tu pago . . .</Text>
+            }}>We are processing your payment. . .</Text>
         </View>)
     }
 
@@ -212,28 +212,28 @@ function Index(props){
         }}>
 
 
-            <Text style={styles.title_succesfull } >Transacción APROBADA</Text>
+            <Text style={styles.title_succesfull } >Approved transaction</Text>
 
-            <Text style={styles.title } >Información de la transacción</Text>
-            <Text style={styles.item_succesfull }>Transacción # <Text style={styles.item_succesfull_bold}>{IdTransaction}</Text></Text>
-            <Text style={styles.item_succesfull }>Referencia <Text style={styles.item_succesfull_bold}>{RefferedPay}</Text></Text>
+            <Text style={styles.title } >Transaction Information</Text>
+            <Text style={styles.item_succesfull }>Transaction # <Text style={styles.item_succesfull_bold}>{IdTransaction}</Text></Text>
+            <Text style={styles.item_succesfull }>Reference <Text style={styles.item_succesfull_bold}>{RefferedPay}</Text></Text>
             <Text style={styles.item_succesfull }>Email <Text style={styles.item_succesfull_bold}>{userData.email}</Text> </Text>
 
 
-            <Text style={styles.title } >Información del pagador</Text>
-            <Text style={styles.item_succesfull }>Nombre <Text style={styles.item_succesfull_bold}>{userData.name}</Text></Text>
+            <Text style={styles.title } >Payer information</Text>
+            <Text style={styles.item_succesfull }>Name <Text style={styles.item_succesfull_bold}>{userData.name}</Text></Text>
             
             {
               props.route.params.payment_concept == "Estudio de Credito" || props.route.params.payment_concept == "Estudio de Credito + Valoracion" &&
                 <TouchableOpacity style={styles.loginBtn} onPress={()=>goToScreen("Homee")}   >
-                  <Text style={styles.loginText}>Finalizar</Text>
+                  <Text style={styles.loginText}>Finish</Text>
                 </TouchableOpacity>
             }
 
             {
               props.route.params.payment_concept != "Estudio de Credito" && props.route.params.payment_concept != "Estudio de Credito + Valoracion" &&
                 <TouchableOpacity style={styles.loginBtn} onPress={()=>goToScreen("Homee")}   >
-                  <Text style={styles.loginText}>Finalizar</Text>
+                  <Text style={styles.loginText}>Finish</Text>
                 </TouchableOpacity>
             }
         </View>)
@@ -297,8 +297,8 @@ function Index(props){
                   </View>
 
 
-                  <View><Text style={styles.tittleHeader}>Resumen del pago</Text></View>
-                  <View><Text style={styles.SubtittleHeader}>Confirma y procesa tu pago de {props.route.params.payment_concept}.</Text></View>
+                  <View><Text style={styles.tittleHeader}>Payment summary</Text></View>
+                  <View><Text style={styles.SubtittleHeader}>Confirm and process your payment {props.route.params.payment_concept}.</Text></View>
                   <View><Text style={styles.SubtittlePrice}>COP <Text style={styles.Price}>{props.route.params.amount_in_cents}</Text></Text></View>
               </View>
             
@@ -313,13 +313,13 @@ function Index(props){
                           <Text>{MessageError}</Text>
                         }
                       
-                      <Text style={styles.card_item}><Text style={styles.card_item_bold}>Concepto</Text>: {props.route.params.payment_concept}</Text>
-                      <Text style={styles.card_item}><Text style={styles.card_item_bold}>Referencia: </Text> {RefferedPay}</Text>
-                      <Text style={styles.card_item}><Text style={styles.card_item_bold}>Monto: </Text> {currencyFormat(props.route.params.amount_in_cents)}</Text>
+                      <Text style={styles.card_item}><Text style={styles.card_item_bold}>Concept</Text>: {props.route.params.payment_concept}</Text>
+                      <Text style={styles.card_item}><Text style={styles.card_item_bold}>Reference: </Text> {RefferedPay}</Text>
+                      <Text style={styles.card_item}><Text style={styles.card_item_bold}>Amount: </Text> {currencyFormat(props.route.params.amount_in_cents)}</Text>
 
 
                       <TouchableOpacity style={styles.loginBtn} onPress={()=>GotoPay()}   >
-                        <Text style={styles.loginText}>Pagar</Text>
+                        <Text style={styles.loginText}>Pay</Text>
                       </TouchableOpacity>
 
                   </View>
@@ -409,7 +409,7 @@ const styles = StyleSheet.create({
     },
 
     SubtittlePrice : {
-        color: '#1B7BCC',
+        color: '#267871',
         fontSize: 20,
         marginTop: 10
     },
@@ -454,7 +454,7 @@ const styles = StyleSheet.create({
 
       loginBtn:{
         width:"80%",
-        backgroundColor:"#1B7BCC",
+        backgroundColor:"#267871",
         borderRadius:25,
         height:50,
         alignItems:"center",
@@ -592,7 +592,7 @@ const styles = StyleSheet.create({
       },
       title : {
         fontWeight: "bold",
-        color : "#1B7BCC",
+        color : "#267871",
         padding: 5
       },
       item_succesfull : {

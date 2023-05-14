@@ -26,7 +26,7 @@ const ShoppingCart = () => {
 
   useEffect(() => {
     navigation.setOptions({
-      headerTitle: 'Carrito de Compra',
+      headerTitle: 'Shopping cart',
       headerTintColor: 'black',
       headerBackTitleVisible: false,
       //for android
@@ -48,12 +48,12 @@ const ShoppingCart = () => {
           <View style={{width: '80%', height: 120, justifyContent: 'center'}}>
             <View style={{width: '100%', height: '80%', justifyContent: 'space-between'}}>
               <View style={{width: '100%', flexDirection: 'row', justifyContent: 'space-between'}}>
-                <Text style={{color: 'black'}}>Pagar</Text>
+                <Text style={{color: 'black'}}>Pay</Text>
                 <Text style={{color: 'black'}}>{total}.000</Text>
               </View>
               <View style={{alignItems: 'center'}}>
                 <TouchableOpacity style={styles.shoppingCart_button} onPress={() => navigation.navigate('PaimentData', {total: total, car: false})}>
-                  <Text style={{color: 'white', fontSize: 14, fontWeight: '600'}}>Ir a Pagar</Text>
+                  <Text style={{color: 'white', fontSize: 14, fontWeight: '600'}}>Go to pay</Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -61,7 +61,7 @@ const ShoppingCart = () => {
         </>
         :
         <View style={{alignItems: 'center', marginTop: 100}}>
-          <Text style={{color: 'black'}}>Carrito de compra vacío</Text>
+          <Text style={{color: 'black'}}>Empty shopping cart</Text>
         </View>
       }
     </View>
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   shoppingCart_button: {
     width: '100%',
     height: 50,
-    backgroundColor: '#1B7BCC',
+    backgroundColor: '#267871',
     marginTop: 20,
     marginBottom: 60,
     justifyContent: 'center',

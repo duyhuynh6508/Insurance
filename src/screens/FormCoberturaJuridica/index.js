@@ -17,7 +17,7 @@ const FormCoberturaJuridica = ({ route }) => {
 
   useEffect(() => {
     navigation.setOptions({
-      headerTitle: 'Formulario',
+      headerTitle: 'Form',
       headerTransparent: true,
       headerTintColor: 'white',
       headerBackTitleVisible: false,
@@ -97,14 +97,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 85,
     height: 85,
-    backgroundColor: 'white',
+    backgroundColor: '#267871',
     borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
     top: '19%'
   },
   formCoberturaJuridica_logoImg: {
-    width: 70,
-    height: 70
+    width: 50,
+    height: 50
   }
 })

@@ -12,14 +12,14 @@ const ShoppingSingleCart = ({ title, img, doctorOne, doctorTwo, patient, price, 
         <View style={styles.shoppingSingleCart_content}>
           <View style={{width: '70%'}}>
             <Text style={{fontSize: 16, fontWeight: '800', letterSpacing: -.5, color: 'black'}}>{title}</Text>
-            <Text style={{fontSize: 12, fontWeight: '600', color: 'black'}}>Cirujano:</Text>
+            <Text style={{fontSize: 12, fontWeight: '600', color: 'black'}}>Doctor:</Text>
             <Text style={{fontSize: 12, fontWeight: '300', color: 'black'}}>{doctorOne}</Text>
             {doctorTwo ?
              <Text style={{fontSize: 12, fontWeight: '300', color: 'black'}}>{doctorTwo}</Text>
              :
              null
             }
-            <Text style={{fontSize: 12, fontWeight: '600', color: 'black'}}>Paciente:</Text>
+            <Text style={{fontSize: 12, fontWeight: '600', color: 'black'}}>Patient:</Text>
             <Text style={{fontSize: 12, fontWeight: '300', color: 'black'}}>{patient}</Text>
           </View>
           <View style={styles.shoppingSingleCart_contentRight}>
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   shoppingSingleCart_img: {
-    backgroundColor: '#1B7BCC',
+    backgroundColor: '#267871',
     width: 99,
     height: 101,
     justifyContent: 'center',

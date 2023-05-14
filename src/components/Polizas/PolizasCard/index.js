@@ -17,7 +17,7 @@ const PolizasCard = ({ name, procedureTipe }) => {
                 <View>
                     <View style={styles.polizasCard_textOptions_}>
                         <View style={styles.polizasCard_textActive} />
-                        <Text style={styles.polizasCard_textActive_} >Activa</Text>                    
+                        <Text style={styles.polizasCard_textActive_} >Active</Text>                    
                     </View>
                 </View>
             </View>

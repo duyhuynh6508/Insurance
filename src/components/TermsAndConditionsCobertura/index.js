@@ -17,18 +17,18 @@ const TermsAndConditionsCobertura = ({ setAccept, bottomSheetModalTermRef }) => 
   return (
     <View style={{ width: '100%', height: '100%', alignItems: 'center' }}>
       <View style={styles.termsAndConditions}>
-        <Text style={styles.termsAndConditions_title}>Términos y Condiciones / Política de Privacidad</Text>
+        <Text style={styles.termsAndConditions_title}>Terms and Conditions / Privacy Policy</Text>
         <ScrollView style={{ height: '60%' }}>
-          <Text style={styles.termsAndConditions_containerTitle}>Los acuerdos legales expuestos a continuación rigen el uso que uste haga de la aplicación / Plataforma Blindaje Médico Quirúrgico y de los servicios que se deriven de la misma</Text>
+          <Text style={styles.termsAndConditions_containerTitle}>The legal agreements set out below govern the use that you make of the application / Medical Surgical Shielding Platform and the services derived from it.</Text>
           <TermsAndConditionsText />
         </ScrollView>
         <View style={styles.termsAndConditions_buttons}>
           <TouchableOpacity onPress={acceptTerms} style={styles.termsAndConditions_buttonsAccept}>
-            <Text style={{ color: 'white', fontWeight: '600' }}>Aceptar</Text>
+            <Text style={{ color: 'white', fontWeight: '600' }}>Accept</Text>
           </TouchableOpacity>
           <View style={{ width: 100, height: 40, justifyContent: 'center', alignItems: 'center' }}>
             <TouchableOpacity onPress={noAcceptTerms} style={styles.termsAndConditions_buttonsNoAccept}>
-              <Text style={{color: 'black'}}>Cancelar</Text>
+              <Text style={{color: 'black'}}>Cancel</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   termsAndConditions_buttonsAccept: {
     width: 100,
     height: 40,
-    backgroundColor: '#1B7BCC',
+    backgroundColor: '#267871',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10

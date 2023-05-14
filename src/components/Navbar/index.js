@@ -6,7 +6,7 @@ const Navbar = () => {
     <View style={styles.navbar}>
         <View style={styles.navbarContent}>
             <Text>Alert</Text>
-            <Text>Hola Cliente</Text>
+            <Text>Hello client</Text>
             <Text>Icon</Text>
         </View>
     </View>

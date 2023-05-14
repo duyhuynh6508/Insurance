@@ -16,11 +16,11 @@ const AuthComponentLogin = () => {
             <Text style={styles.authComponentLogin_title}>Email</Text>
             <View style={styles.authComponentLogin_content_}>
                 <MessageText size='20' color='black' style={{marginVertical: 8}} />
-                <TextInput style={styles.authComponentLogin_contentInput} placeholder='Correo Electrónico' placeholderTextColor='black' value={email} onChangeText={text => setEmail(text)} autoCapitalize='none' />
+                <TextInput style={styles.authComponentLogin_contentInput} placeholder='Email' placeholderTextColor='black' value={email} onChangeText={text => setEmail(text)} autoCapitalize='none' />
             </View>
         </View>
         <View style={styles.authComponentLogin}>
-            <Text style={styles.authComponentLogin_title}>Contraseña</Text>
+            <Text style={styles.authComponentLogin_title}>Password</Text>
             <View style={styles.authComponentLogin_content_}>
                 <MessageText size='20' color='black' style={{marginVertical: 8}} />
                 <TextInput style={styles.authComponentLogin_contentInput} placeholder='*********' placeholderTextColor='black' value={password} onChangeText={text => setPassword(text)} autoCapitalize='none' />
@@ -28,7 +28,7 @@ const AuthComponentLogin = () => {
         </View>
         <View style={styles.authComponentLogin_ButtonContent}>
             <TouchableOpacity style={styles.authComponentLogin_Button} onPress={() => {login(email, password)}}>
-                <Text style={styles.authComponentLogin_ButtonTitle}>Iniciar Sesión</Text>
+                <Text style={styles.authComponentLogin_ButtonTitle}>Log in</Text>
             </TouchableOpacity>
         </View>
     </>
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     authComponentLogin_Button: {
         width: '80%',
         height: 60,
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 20,

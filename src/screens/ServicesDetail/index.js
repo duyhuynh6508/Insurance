@@ -37,7 +37,7 @@ const ServicesDetail = ({route}) => {
 
   useEffect(() => {
     navigation.setOptions({
-      headerTitle: 'Agregar',
+      headerTitle: 'Add',
       headerTransparent: true,
       headerTintColor: 'white',
       headerBackTitleVisible: false,
@@ -75,7 +75,7 @@ const ServicesDetail = ({route}) => {
           {route.params?.procedimientos ?
             <View style={styles.servicesDetail_container_}>
               <Text style={styles.servicesDetail_procedureTipeTitle}>
-                Seleccione el tipo de procedimiento
+                Select the type of procedure
               </Text>
               <View style={styles.servicesDetail_procedureTipe}>
                 <View style={styles.servicesDetail_procedureTipe_}>
@@ -88,7 +88,7 @@ const ServicesDetail = ({route}) => {
                     }>
                     <Text
                       style={{color: 'white', fontSize: 16, fontWeight: '600'}}>
-                      Estético
+                      Aesthetic
                     </Text>
                   </TouchableOpacity>
                   <TouchableOpacity
@@ -100,13 +100,13 @@ const ServicesDetail = ({route}) => {
                     }>
                     <Text
                       style={{color: 'white', fontSize: 16, fontWeight: '600'}}>
-                      Quirúrgico
+                      Surgical
                     </Text>
                   </TouchableOpacity>
                 </View>
               </View>
               <Text style={styles.servicesDetail_containerTextTitle}>
-                Planes
+                Plans
               </Text>
               {esteticoSelected === true ?
                 <View style={{height: '100%', paddingHorizontal: 5}}>
@@ -118,7 +118,7 @@ const ServicesDetail = ({route}) => {
                       ]}
                       onPress={handleBasicPlan}>
                       <Text style={styles.servicesDetail_containerButtonText}>
-                        Básico
+                        Basic
                       </Text>
                     </TouchableOpacity>
                     <TouchableOpacity
@@ -135,7 +135,7 @@ const ServicesDetail = ({route}) => {
                   {basicPlan && (
                     <CardPlans
                       idN={route.params?.id}
-                      titleDescription={'Descripción'}
+                      titleDescription={'Description'}
                       description={
                         route.params?.procedimientos[0].estetico.planes[0]
                           .planDescription
@@ -183,7 +183,7 @@ const ServicesDetail = ({route}) => {
                       ]}
                       onPress={handleBasicPlan}>
                       <Text style={styles.servicesDetail_containerButtonText}>
-                        Básico
+                        Basic
                       </Text>
                     </TouchableOpacity>
                     <TouchableOpacity
@@ -200,7 +200,7 @@ const ServicesDetail = ({route}) => {
                   {basicPlan && (
                     <CardPlans
                       idN={route.params?.id}
-                      titleDescription={'Descripción'}
+                      titleDescription={'Description'}
                       description={
                         route.params?.procedimientos[1].quirurgico.planes[0]
                           .planDescription
@@ -243,18 +243,15 @@ const ServicesDetail = ({route}) => {
             :
             <View style={styles.servicesDetail_container_}>
               <View style={{height: '100%'}}>
-                <CardPlansWebView
-                  titleDescription={'Descripción'}
-                  description={route.params?.descriptionL}
-                  price={route.params?.price}
-                  backgroundImg={route.params?.backgroundImg}
-                  name={route.params?.name}
-                  logoDetail={route.params?.logoDetail}
-                  url={route.params?.url}
-                  nameU={userData.name}
-                  serviceU={route.params?.name}
-                  logoIcon={route.params?.log}
-                />
+                <CardPlans
+                      titleDescription={'Description'}
+                      description={route.params?.descriptionL}
+                      price={route.params?.price}
+                      backgroundImgN={route.params?.backgroundImg}
+                      nameN={route.params?.name}
+                      logoDetailN={route.params?.logoDetail}
+                      logoIcon={route.params?.logo}
+                    />
               </View>
             </View>
           }
@@ -281,7 +278,7 @@ const styles = StyleSheet.create({
   },
   servicesDetail_header: {
     height: 650,
-    width: '100%',
+    width: '100%', 
   },
   servicesDetail_headerImgBackground: {
     width: '100%',
@@ -380,14 +377,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 90,
     height: 90,
-    backgroundColor: 'white',
+    backgroundColor: '#267871',
     borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
     top: '18%',
   },
   servicesDetail_logoImg: {
-    width: 70,
-    height: 70,
+    width: 50,
+    height: 50,
   },
 });

@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     authComponentRegister_button: {
         width: '80%',
         height: 60,
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 20,

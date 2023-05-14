@@ -76,7 +76,7 @@ const PaimentData = ({ route, ...props }) => {
 
     useEffect(() => {
         navigation.setOptions({
-            headerTitle: `Datos de la ${route.params?.tipePaiment}`,
+            headerTitle: `Card data ${route.params?.tipePaiment}`,
             headerTransparent: true,
             headerBackTitleVisible: false,
             headerTintColor: 'white'

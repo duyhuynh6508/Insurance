@@ -33,7 +33,7 @@ const CoberturaJuridica = () => {
         <TouchableOpacity onPress={() => Navigation.navigate("ShoppingCart")} style={{position: 'relative'}}>
           <ShoppingCart color="black" variant="Linear" size={30} style={{ marginRight: 20 }} />
           {shopping.length > 0 ?
-            <View style={{position: 'absolute', right: 10, top: -7, backgroundColor: '#1B7BCC', height: 22, width: 22, borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+            <View style={{position: 'absolute', right: 10, top: -7, backgroundColor: '#267871', height: 22, width: 22, borderRadius: 50, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
               <Text style={{color: 'white', fontSize: 12}}>{shopping.length}</Text>
             </View>
             :
@@ -41,7 +41,7 @@ const CoberturaJuridica = () => {
           }
         </TouchableOpacity>
       ),
-      headerTitle: 'Coberturas',
+      headerTitle: 'Coverages',
       headerStyle: {
         borderBottomColor: 'white',
         shadowOpacity: 0,

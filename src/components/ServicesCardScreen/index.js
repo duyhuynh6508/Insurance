@@ -16,24 +16,14 @@ const ServicesCardScreen = ({ status, logo, name, description, price, id, descri
                     <View style={styles.servicesCardScreen_text_}>
                         <Text style={styles.servicesCardScreen_textTitle}>{name}</Text>
                         <Text style={styles.servicesCardScreen_textDescripcion}>{description}</Text>
-                            {id === '1' ?
-                                <>
-                                    <Text style={styles.servicesCardScreen_textDesde}>Desde</Text>
-                                    <Text style={styles.servicesCardScreen_textPrice}>
-                                        {price}
-                                    </Text>
-                                </>
-                                :
-                                null
-                            }
                     </View>
                     {status === 'comprar' ? 
                         <TouchableOpacity onPress={() => navigation.navigate("DetailStack", { id: id, name: name, descriptionL: descriptionL, backgroundImg: backgroundImg, price: price, logo: logo, logoDetail: logoDetail, planes: planes, procedimientos: procedimientos, url: url })} style={styles.servicesCardCard_textActive}>
-                            <Text style={styles.servicesCardCard_textButton} >Comprar</Text>                    
+                            <Text style={styles.servicesCardCard_textButton} >Buy</Text>                    
                         </TouchableOpacity>
                         :
                         <TouchableOpacity onPress={() => navigation.navigate("DetailStack", { name: name, descriptionL: descriptionL, backgroundImg: backgroundImg, price: price, procedimientos: procedimientos, logo: logo, logoDetail: logoDetail, planes: planes, url: url })} style={styles.servicesCardCard_textDisabled}>
-                            <Text style={styles.servicesCardCard_textButton} >Renovar</Text>
+                            <Text style={styles.servicesCardCard_textButton} >Renew</Text>
                         </TouchableOpacity>
                     }
                 </View>
@@ -64,7 +54,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     servicesCardScreen_imgContent: {
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         width: 90,
         height: 95,
         justifyContent: 'center',

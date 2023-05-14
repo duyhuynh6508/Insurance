@@ -17,50 +17,6 @@ export const AuthProvider = ({ children }) => {
     const [total, setTotal] = useState(0)
     console.log('Carrito de compraaa: ', shopping)
 
-    // const [shopping, setShopping] = useState(() => {
-    //     try {
-    //         const productOnLocalStorage = AsyncStorage.getItem("cartProducts")
-    //         return productOnLocalStorage ? JSON.parse(productOnLocalStorage) : []
-    //     } catch (error) {
-    //         return []
-    //     }
-    // })
-
-
-    // useEffect(() => {
-    //     AsyncStorage.setItem('cartProducts', JSON.stringify(shopping))
-    //     console.log('shopping', shopping)
-    // }, [shopping])
-
-    // const addItemCart = (product) => {
-    //     const inCart = shopping.find((productInCart) => productInCart.id === product.id)
-    //     if(inCart){
-    //         setShopping(
-    //             shopping.map((productInCart) => {
-    //                 if(productInCart.id === product.id){
-    //                     return {...inCart, amount: inCart.amount + 1}
-    //                 } else return productInCart
-    //             })
-    //         )
-    //     } else {
-    //         setShopping([...shopping, {...product, amount: 1}])
-    //     }
-    // }
-
-    // const deleteItemCart = (product) => {
-    //     const inCart = shopping.find((productInCart) => productInCart.id === product.id)
-    //     if (inCart.amount === 1){
-    //         setShopping(shopping.filter((productInCart) => productInCart.id !== product.id))
-    //     } else {
-    //         setShopping((productInCart) => {
-    //             if(productInCart.id === product.id){
-    //                 return {...inCart, amount: inCart.amount -1}
-    //             } else return productInCart
-    //         })
-    //     }
-    // }
-
-
     const login = (email, password) => {
         setIsLoading(true)
         setLoadingScreen(true)

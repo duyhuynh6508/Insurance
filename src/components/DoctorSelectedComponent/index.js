@@ -11,7 +11,7 @@ const DoctorSelectedComponent = ({ fieldName, onPressDelete }) => {
         </View>
         <View style={styles.doctorAdd_delete}>
             <TouchableOpacity style={styles.doctorAdd_deleteButton} onPress={onPressDelete}>
-                <Text style={styles.doctorAdd_deleteButtonText}>Eliminar</Text>
+                <Text style={styles.doctorAdd_deleteButtonText}>Remove</Text>
             </TouchableOpacity>
         </View>
     </View>

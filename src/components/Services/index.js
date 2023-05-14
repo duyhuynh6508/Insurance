@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     services_headerButton: {
         width: 100,
         height: 30,
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,

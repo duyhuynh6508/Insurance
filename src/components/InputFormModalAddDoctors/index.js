@@ -16,8 +16,8 @@ const InputFormModalAddDoctors = ({ valueDoctor, bottomSheetModalRef, doctorSele
             }).then(res => {
                 if(doctorSelected.length === 2){
                     Alert.alert(
-                        "Máximo de cirujanos",
-                        "Puede agregar un máximo de dos cirujanos",
+                        "Maximum number of the doctors",
+                        "You can add a maximum of two doctors",
                         [
                             {
                                 text: 'Ok'
@@ -47,8 +47,8 @@ const InputFormModalAddDoctors = ({ valueDoctor, bottomSheetModalRef, doctorSele
             })
         } else {
             Alert.alert(
-                "Datos Incompletos",
-                "Por favor complete todos los campos",
+                "Incomplete data",
+                "Please complete all fields",
                 [
                     {
                         text: 'Ok'
@@ -60,14 +60,14 @@ const InputFormModalAddDoctors = ({ valueDoctor, bottomSheetModalRef, doctorSele
 
   return (
     <View style={styles.inputModalAddDoctor}>
-        <Text style={styles.inputModalAddDoctor_title}>Agregar Cirujano</Text>
+        <Text style={styles.inputModalAddDoctor_title}>Add Doctor</Text>
         <View style={styles.inputModalAddDoctor_container}>
-            <Text style={styles.inputModalAddDoctor_inputTitle}>Nombre</Text>
+            <Text style={styles.inputModalAddDoctor_inputTitle}>Name</Text>
             <View style={styles.inputModalAddDoctor_}>
                 <User color='black' variant='Linear' size={20} />
                 <TextInput
                     style={styles.inputModalAddDoctor_input}
-                    placeholder='Nombre Completo'
+                    placeholder='Full name'
                     value={nameAddDoctor}
                     onChangeText={text => setNameAddDoctor(text)}
                     placeholderTextColor='black'
@@ -76,12 +76,12 @@ const InputFormModalAddDoctors = ({ valueDoctor, bottomSheetModalRef, doctorSele
             </View>
         </View>
         <View style={styles.inputModalAddDoctor_container}>
-            <Text style={styles.inputModalAddDoctor_inputTitle}>Identificación</Text>
+            <Text style={styles.inputModalAddDoctor_inputTitle}>Identification</Text>
             <View style={styles.inputModalAddDoctor_}>
                 <Hashtag color='black' variant='Linear' size={20} />
                 <TextInput
                     style={styles.inputModalAddDoctor_input}
-                    placeholder='Número de Identificación'
+                    placeholder='Identification number'
                     value={identificationAddDoctor}
                     onChangeText={num => setIdentificationAddDoctor(num)}
                     placeholderTextColor='black'
@@ -90,7 +90,7 @@ const InputFormModalAddDoctors = ({ valueDoctor, bottomSheetModalRef, doctorSele
             </View>
         </View>
         <TouchableOpacity style={styles.inputModalAddDoctor_button} onPress={onPressAddDoctor}>
-            <Text style={styles.inputModalAddDoctor_buttonText}>Agregar</Text>
+            <Text style={styles.inputModalAddDoctor_buttonText}>Add</Text>
         </TouchableOpacity>
     </View>
   )
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     inputModalAddDoctor_button: {
         width: '50%',
         height: 60,
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         marginTop: 20,
         marginBottom: 60,
         justifyContent: 'center',

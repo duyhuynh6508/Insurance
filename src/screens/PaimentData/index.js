@@ -121,7 +121,7 @@ const PaimentData = ({ route, ...props }) => {
 
     useEffect(() => {
         navigation.setOptions({
-            headerTitle: 'Datos de la tarjeta',
+            headerTitle: 'Card data',
             headerTransparent: true,
             headerBackTitleVisible: false,
             headerTintColor: 'white',
@@ -146,10 +146,10 @@ const PaimentData = ({ route, ...props }) => {
               cvcCard: "798"
           }}
           validationSchema={Yup.object({
-              nameCard: Yup.string().typeError('El campo es requerido').required('El campo es requerido'),
-              numCard: Yup.number().typeError('El campo debe ser de tipo numérico').required('El campo es requerido'),
-              expCard: Yup.string().typeError('El campo es requerido').required('El campo es requerido'),
-              cvcCard: Yup.number().typeError('El campo debe ser de tipo numérico').required('El campo es requerido')
+              nameCard: Yup.string().typeError('The field is required').required('The field is required'),
+              numCard: Yup.number().typeError('The field must be of numeric type').required('The field is required'),
+              expCard: Yup.string().typeError('The field is required').required('The field is required'),
+              cvcCard: Yup.number().typeError('The field must be of numeric type').required('The field is required')
           })}
           onSubmit={values => payCobertura(values)}
         >

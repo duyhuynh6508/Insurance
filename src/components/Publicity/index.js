@@ -12,8 +12,8 @@ const publicityData = [
     },
     {
         id: '2',
-        title: 'Complicaciones Postquirúrgicas',
-        description: 'Tiene como objeto Cubrir Los gastos médicos, de urgencias, hospitalarios y quirúrgicos que se deriven de una complicación de Cirugía...',
+        title: 'Post-surgical Complications',
+        description: 'Its purpose is to cover the medical, emergency, hospital and surgical expenses that derive from a complication of Surgery...',
         logo: BlindajeLogo
     }
 ]

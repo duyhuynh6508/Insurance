@@ -10,7 +10,7 @@ const InputAddDoctors = ({ value, onChangeText }) => {
                 <View style={styles.inputAddDoctors_inputView}>
                     <TextInput
                         style={styles.inputAddDoctors_input}
-                        placeholder='Nombre Completo'
+                        placeholder='Full name'
                         placeholderTextColor='black'
                         value={value}
                         onChangeText={onChangeText}

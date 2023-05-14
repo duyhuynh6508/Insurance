@@ -43,7 +43,7 @@ function Stacks() {
             <ServicesScreenStack.Screen name='PaimentData' component={PaimentData} />
             <ServicesScreenStack.Screen name='PaymentNequi' component={PaymentNequi} />
             <ServicesScreenStack.Screen name='PaymentSummary' component={PaymentSummary} options={() => ({
-                headerTitle: 'Resumen de pago',
+                headerTitle: 'Payment Summary',
                 //for android
                 headerTitleAlign: 'center',
                 headerTitleStyle: {
@@ -117,7 +117,7 @@ function Tabs() {
         <Tab.Navigator
             initialRouteName='Homee'
             screenOptions={{
-                tabBarActiveTintColor: '#1B7BCC',
+                tabBarActiveTintColor: '#267871',
                 tabBarInactiveTintColor: 'rgba(27, 123, 204, .3)',
                 unmountOnBlur: true,
                 tabBarLabelStyle: {
@@ -192,7 +192,7 @@ function Tabs() {
                },
                 tabBarLabel: 'Add',
                 tabBarIcon: () => (
-                  <AddCircle color='#1B7BCC' variant="Bold" size={65} style={{ marginTop: -15, shadowOffset: {height: 10}, shadowColor: 'rgba(0, 0, 0, .8)', shadowOpacity: .3 }} />
+                  <AddCircle color='#267871' variant="Bold" size={65} style={{ marginTop: -15, shadowOffset: {height: 10}, shadowColor: 'rgba(0, 0, 0, .8)', shadowOpacity: .3 }} />
                 ),
                 headerShown: false
             })} />

@@ -8,7 +8,7 @@ const FormPolicies = ({ route }) => {
 
   useEffect(() => {
     navigation.setOptions({
-      headerTitle: 'Formulario',
+      headerTitle: 'Form',
       headerTintColor: 'black',
       headerBackTitleVisible: false
     })
@@ -17,20 +17,24 @@ const FormPolicies = ({ route }) => {
   useEffect(() => {
 
   }, [])
-
+try{
   return (
     <View style={styles.formPolices}>
       <View style={styles.formPolices_container}>
         {route.params?.url !== '' ?
-          <WebView style={styles.formPolicies_webView} source={{ uri: route.params?.url }} onLoad={console.log('Cargando')} />
+          <WebView style={styles.formPolicies_webView} javaScriptEnabled={true} source={{ uri: route.params?.url }} onLoad={console.log('Cargando')} />
           :
           <View style={{ height: '100%', justifyContent: 'center', alignItems: 'center' }}>
             <Text>No tengo Uri</Text>
           </View>
         }
+
       </View>
     </View>
-  )
+  );}
+  catch (error) {
+    console.log('WebView error:', error);
+  }
 }
 
 export default FormPolicies

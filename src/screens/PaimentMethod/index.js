@@ -83,7 +83,7 @@ const ShoppingCartCobertura = ({ route }) => {
 
   useEffect(() => {
     navigation.setOptions({
-      headerTitle: 'Método de Pago',
+      headerTitle: 'Payment method',
       headerTransparent: true,
       headerBackTitleVisible: false,
       headerTintColor: 'black',
@@ -104,10 +104,10 @@ const ShoppingCartCobertura = ({ route }) => {
               <View style={styles.shoppingCartCobertura_method_}>
                 <ShopAdd size={30} color='black' />
                 <View>
-                  <Text style={styles.shoppingCartCobertura_methodFirstText}>Agregar al Carrito</Text>
-                  <Text style={styles.shoppingCartCobertura_methodSecondText}>Continuar comprando</Text>
+                  <Text style={styles.shoppingCartCobertura_methodFirstText}>Add to cart</Text>
+                  <Text style={styles.shoppingCartCobertura_methodSecondText}>Continue buying</Text>
                 </View>
-                <ArrowRight2 size={25} color='#1B7BCC' />
+                <ArrowRight2 size={25} color='#267871' />
               </View>
             </TouchableOpacity>
            } 
@@ -115,27 +115,27 @@ const ShoppingCartCobertura = ({ route }) => {
           <View style={openPaimentMethod ? styles.shoppingCartCobertura_method_open : styles.shoppingCartCobertura_method_}>
             <Shop size={30} color={openPaimentMethod ? 'white' : 'black'} />
             <View>
-              <Text style={openPaimentMethod ? styles.shoppingCartCobertura_methodFirstTextOpen : styles.shoppingCartCobertura_methodFirstText}>Ir a Pagar</Text>
-              <Text style={openPaimentMethod ? styles.shoppingCartCobertura_methodSecondTextOpen : styles.shoppingCartCobertura_methodSecondText}>Carrito de Compra</Text>
+              <Text style={openPaimentMethod ? styles.shoppingCartCobertura_methodFirstTextOpen : styles.shoppingCartCobertura_methodFirstText}>Go to pay</Text>
+              <Text style={openPaimentMethod ? styles.shoppingCartCobertura_methodSecondTextOpen : styles.shoppingCartCobertura_methodSecondText}>Shopping cart</Text>
             </View>
             {openPaimentMethod === true ?
               <ArrowDown2  size={25} color='white' />
               :
-              <ArrowRight2 size={25} color='#1B7BCC' />
+              <ArrowRight2 size={25} color='#267871' />
             }
           </View>
             {openPaimentMethod && 
               <View style={{width: '100%', alignItems: 'center'}}>
                 <View style={styles.openPaimentMethod_card}>
-                  <Text style={{ color: 'white' }}>Selecciona método de pago</Text>
+                  <Text style={{ color: 'white' }}>Select payment method</Text>
                   <TouchableOpacity style={styles.openPaimentMethod_cardCredit} onPress={paimentCartAndAddShoppingCart}>
                     <View style={styles.shoppingCartCobertura_method_peq}>
                       <Card size={30} color='black' />
                       <View>
-                        <Text style={styles.shoppingCartCobertura_methodFirstText}>Tarjeta de Crédito o Debito</Text>
-                        <Text style={styles.shoppingCartCobertura_methodSecondText}>Paga con Visa o MasterCard</Text>
+                        <Text style={styles.shoppingCartCobertura_methodFirstText}>Credit or debit card</Text>
+                        <Text style={styles.shoppingCartCobertura_methodSecondText}>Pay with Visa or MasterCard</Text>
                       </View>
-                      <ArrowRight2 size={25} color='#1B7BCC' />
+                      <ArrowRight2 size={25} color='#267871' />
                     </View>
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.shoppingCartCobertura_method} onPress={paymentNequi}>
@@ -143,7 +143,7 @@ const ShoppingCartCobertura = ({ route }) => {
                       <View>
                         <Image source={LogoNequi} style={styles.shoppingCartCobertura_methodNequi} />
                       </View>
-                      <ArrowRight2 size={25} color='#1B7BCC' />
+                      <ArrowRight2 size={25} color='#267871' />
                     </View>
                   </TouchableOpacity>
                 </View>
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
   },
   shoppingCartCobertura_methodOpen: {
     height: 300,
-    backgroundColor: '#1B7BCC',
+    backgroundColor: '#267871',
     borderRadius: 20,
     shadowOffset: {height: 4},
     shadowColor: 'black',
@@ -267,7 +267,7 @@ const styles = StyleSheet.create({
           <Text style={styles.shoppingCartCobertura_methodFirstText}>Tarjeta de Crédito o Debito</Text>
           <Text style={styles.shoppingCartCobertura_methodSecondText}>Paga con tu Visa o MasterCard</Text>
         </View>
-        <ArrowRight2 size={25} color='#1B7BCC' />
+        <ArrowRight2 size={25} color='#267871' />
       </View>
     </TouchableOpacity>
     <TouchableOpacity style={styles.shoppingCartCobertura_method} onPress={() => navigation.navigate('PaimentData', {plan: route.params?.plan, price: route.params?.price, values: route.params?.values, tipePaiment: 'Cuenta'})}>
@@ -275,7 +275,7 @@ const styles = StyleSheet.create({
         <View>
           <Image source={LogoNequi} style={styles.shoppingCartCobertura_methodNequi} />
         </View>
-        <ArrowRight2 size={25} color='#1B7BCC' />
+        <ArrowRight2 size={25} color='#267871' />
       </View>
     </TouchableOpacity>
   </View> */}

@@ -74,12 +74,12 @@ const FormPaimentData = ({ paimentVal }) => {
         </View>
         <View style={{width: '100%', height: '55%', alignItems: 'center'}}>
             <View style={styles.paimentData_bottomCard} >
-                <InputFormPaimentData title='Nombre en tarjeta' fieldName='nameCard' placeholder={nameInCard} style={styles.paimentData_bottomCardInputContainer} />
-                <InputFormPaimentData title='Número de la Tarjeta'  keyboardType={'numeric'}  fieldName='numCard' placeholder={numInCard} style={styles.paimentData_bottomCardInputContainer} />
+                <InputFormPaimentData title='Name on card' fieldName='nameCard' placeholder={nameInCard} style={styles.paimentData_bottomCardInputContainer} />
+                <InputFormPaimentData title='Card number'  keyboardType={'numeric'}  fieldName='numCard' placeholder={numInCard} style={styles.paimentData_bottomCardInputContainer} />
                 <View style={styles.paimentData_bottomCardInfo}>
                     <View style={styles.paimentData_bottomCardInfo_}>
                         <View style={{ width: '40%' }}>
-                            <InputFormPaimentData title='Fecha Vencimiento' fieldName='expCard' placeholder={dateInCard}style={styles.paimentData_bottomCardInputContainerOtherOne} />
+                            <InputFormPaimentData title='Expiration date' fieldName='expCard' placeholder={dateInCard}style={styles.paimentData_bottomCardInputContainerOtherOne} />
                         </View>
                         <View style={{ width: '40%' }}>
                             <InputFormPaimentData title='CVC' fieldName='cvcCard' keyboardType={'numeric'} placeholder='XXX' style={styles.paimentData_bottomCardInputContainerOtherTwo} />
@@ -88,7 +88,7 @@ const FormPaimentData = ({ paimentVal }) => {
                 </View>
                 <View style={{width: '100%', alignItems: 'center'}}>
                     <TouchableOpacity style={styles.paimentData_paimentButton} onPress={submitForm}>
-                        <Text style={styles.paimentData_paimentButtonText}>pagar ${total}.000</Text>
+                        <Text style={styles.paimentData_paimentButtonText}>Pay ${total}.000</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     paimentData_top: {
         width: '100%',
         height: '45%',
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         alignItems: 'center',
     },
     paimentData_topCard: {
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
         marginBottom: 50,
         width: '80%',
         height: 60,
-        backgroundColor: '#1B7BCC',
+        backgroundColor: '#267871',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 20,
